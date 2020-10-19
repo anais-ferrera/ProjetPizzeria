@@ -1,24 +1,24 @@
 {
-  "name": "pizzeria",
+  "name": "pizza",
   "version": "1.0.0",
-  "description": "Node js pizzeria",
-  "main": "index.js",
+  "description": "Node.js backend for Todo",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "node server.js"
   },
   "keywords": [
     "Node.js",
     "Express",
     "MongoDB",
-    "Pizza"
+    "pizza"
   ],
-  "author": "Anais Ferrera",
+  "author": "Saphya El Ouahabi",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1",
     "body-parser": "^1.19.0",
     "chalk": "^4.1.0",
+    "express": "^4.17.1",
     "mongoose": "^5.10.0",
     "morgan": "^1.10.0",
     "winston": "^3.3.3"

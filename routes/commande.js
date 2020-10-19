@@ -2,10 +2,10 @@
 const router = require('express').Router();
 
 //Access the controllers
-const controller = require('../controllers/pizza');
+const controller = require('../controllers/commande');
 
 //CREATE
-router.post("/pizza", (req, res) => {
+router.post("/commande", (req, res) => {
 
     controller.create(req, res);
     res.json({"msg": "Create a Pizza"});
@@ -13,23 +13,22 @@ router.post("/pizza", (req, res) => {
 });
 
 //READ
-router.get("/pizzas", (req, res) => {
+router.get("/commandes", (req, res) => {
     
     controller.reads(req, res);
     res.json({"msg": "Read a Pizza"});
 
 });
 
-router.get("/pizza/:id", (req, res) => {
+router.get("/commande/:id", (req, res) => {
     
     controller.read(req, res);
 
 });
 
 
-
 //DELETE
-router.delete("/pizza/:id", (req, res) => {
+router.delete("/commande/:id", (req, res) => {
     
     controller.delete(req, res);
 

@@ -1,16 +1,18 @@
+
 function createPizza(req, res) {
-    let Pizza = require('../models/pizza');
-    let newPizza = Pizza ({
-        title: req.body.title,
+    console.log(req.body);
+    let Todo = require('../models/pizza');
+    let newPizza = C ({
+        num_pizza: req.body.num_pizza,
+        nom_pizza : req.body.nom_pizza,
         description : req.body.description,
-        prix: req.body.prix,
-        id: req.body.id
+        prix : req.body.prix,
     });
   
     newPizza.save()
     .then((savedPizza) => {
 
-        //send back the created Todo
+        //send back the created Pizza
         res.json(savedPizza);
             
     }, (err) => {
@@ -19,23 +21,11 @@ function createPizza(req, res) {
 
 }
 
-function readPizzas(req, res) {
-
-    let Pizza = require("../models/pizza");
-
-    Pizza.find({})
-    .then((pizzas) => {
-        res.status(200).json(pizzas);
-    }, (err) => {
-        res.status(500).json(err);
-    });
- }
-
 function readPizza(req, res) {
 
-    let Pizza = require("../models/pizza");
+    let Todo = require("../models/pizza");
 
-    Pizza.findById({_id : req.params.id})
+    Todo.find({})
     .then((pizza) => {
         res.status(200).json(pizza);
     }, (err) => {
@@ -43,28 +33,24 @@ function readPizza(req, res) {
     });
  }
 
-function updatePizza(req, res) {
+function readPizzas(req, res) {
 
-    let Pizza = require("../models/pizza");
+    let Todo = require("../models/pizza");
 
-    Pizza.findByIdAndUpdate({_id: req.params.id}, 
-        {title : req.body.title, 
-        description : req.body.description,
-        prix: req.body.prix,
-        id: req.body.id}, 
-        {new : true})
-    .then((updatedPizza) => {
-        res.status(200).json(updatedPizza);
+    Todo.findById({_id : req.params.id})
+    .then((pizzas) => {
+        res.status(200).json(pizzas);
     }, (err) => {
         res.status(500).json(err);
     });
-}
+ }
+
 
 function deletePizza(req, res) {
 
-    let Pizza = require("../models/pizza");
+    let Todo = require("../models/pizza");
 
-    Pizza.findOneAndRemove({_id : req.params.id})
+    Todo.findOneAndRemove({_id : req.params.id})
     .then((deletedPizza) => {
         res.status(200).json(deletedPizza);
     }, (err) => {
@@ -72,40 +58,9 @@ function deletePizza(req, res) {
     });
  }
 
-function done(req, res) {
-
-    let Pizza = require("../models/pizza");
-
-    Pizza.findByIdAndUpdate({_id: req.params.id}, 
-        {done : true}, 
-        {new : true})
-    .then((updatedPizza) => {
-        res.status(200).json(updatedPizza);
-    }, (err) => {
-        res.status(500).json(err);
-    });
-
-}
-
-function undone(req, res) {
-
-    let Pizza = require("../models/pizza");
-
-    Pizza.findByIdAndUpdate({_id: req.params.id}, 
-        {done : false}, 
-        {new : true})
-    .then((updatedPizza) => {
-        res.status(200).json(updatedPizza);
-    }, (err) => {
-        res.status(500).json(err);
-    });
-
-}
-
 module.exports.create = createPizza;
 module.exports.reads = readPizzas;
 module.exports.read = readPizza;
-module.exports.delete = deletePizza;
-module.exports.update = updatePizza;
-module.exports.done = done;
-module.exports.undone = undone;
+module.exports.delete = deletePizza ;
+
+
