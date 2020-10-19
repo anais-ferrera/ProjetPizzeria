@@ -1,0 +1,16 @@
+Wed, 30 Sep 2020 07:01:07 GMT | ERROR  | HTTP 404: ask for:  http://localhost:3000/
+Wed, 30 Sep 2020 07:01:07 GMT | ERROR  | HTTP 404: ask for:  http://localhost:3000/favicon.ico
+Wed, 30 Sep 2020 07:01:13 GMT | ERROR  | HTTP 404: ask for:  http://localhost:3000/pizza
+Wed, 30 Sep 2020 07:01:25 GMT | ERROR  | HTTP 404: ask for:  http://localhost:3000/pizza
+Wed, 30 Sep 2020 08:59:26 GMT | ERROR  | HTTP 404: ask for:  http://localhost:3000/pizza
+Wed, 30 Sep 2020 08:59:35 GMT | ERROR  | HTTP 404: ask for:  http://localhost:3000/api/v1
+Wed, 30 Sep 2020 08:59:42 GMT | ERROR  | HTTP 404: ask for:  http://localhost:3000/
+Wed, 30 Sep 2020 09:01:00 GMT | ERROR  | HTTP 404: ask for:  http://localhost:3000/
+Wed, 30 Sep 2020 09:01:10 GMT | ERROR  | HTTP 404: ask for:  http://localhost:3000/pizza
+Wed, 30 Sep 2020 09:01:12 GMT | ERROR  | HTTP 404: ask for:  http://localhost:3000/pizza
+Wed, 30 Sep 2020 09:01:13 GMT | ERROR  | HTTP 404: ask for:  http://localhost:3000/pizza
+Wed, 30 Sep 2020 09:01:13 GMT | ERROR  | HTTP 404: ask for:  http://localhost:3000/pizza
+Wed, 30 Sep 2020 09:01:14 GMT | ERROR  | HTTP 404: ask for:  http://localhost:3000/pizza
+Wed, 30 Sep 2020 09:03:09 GMT | ERROR  | HTTP 404: ask for:  http://localhost:3000/api/v1/pizza
+Wed, 30 Sep 2020 09:09:38 GMT | ERROR  | HTTP 404: ask for:  http://localhost:3000/api/v1/pizzas
+Wed, 30 Sep 2020 09:09:43 GMT | ERROR  | HTTP 404: ask for:  http://localhost:3000/api/v1/pizzas
