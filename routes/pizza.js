@@ -6,9 +6,8 @@ const controller = require('../controllers/pizza');
 
 //CREATE
 router.post("/pizza", (req, res) => {
-
     controller.create(req, res);
-    res.json({"msg": "Create a Pizza"});
+    console.log("route pizza");
 
 });
 
@@ -16,17 +15,16 @@ router.post("/pizza", (req, res) => {
 router.get("/pizzas", (req, res) => {
     
     controller.reads(req, res);
-    res.json({"msg": "Read a Pizza"});
+    //res.json({"msg" : "Read all pizza"});
 
 });
 
 router.get("/pizza/:id", (req, res) => {
     
     controller.read(req, res);
+    //res.json({"msg" : "Read a pizza"});
 
 });
-
-
 
 //DELETE
 router.delete("/pizza/:id", (req, res) => {
@@ -34,6 +32,5 @@ router.delete("/pizza/:id", (req, res) => {
     controller.delete(req, res);
 
 });
-
 
 module.exports = router;

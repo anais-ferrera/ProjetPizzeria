@@ -1,8 +1,8 @@
 
 function createPizza(req, res) {
     console.log(req.body);
-    let Todo = require('../models/pizza');
-    let newPizza = C ({
+    let Pizza = require('../models/pizza');
+    let newPizza = Pizza ({
         num_pizza: req.body.num_pizza,
         nom_pizza : req.body.nom_pizza,
         description : req.body.description,
@@ -21,25 +21,25 @@ function createPizza(req, res) {
 
 }
 
-function readPizza(req, res) {
+function readPizzas(req, res) {
 
-    let Todo = require("../models/pizza");
+    let Pizza = require("../models/pizza");
 
-    Todo.find({})
-    .then((pizza) => {
-        res.status(200).json(pizza);
+    Pizza.find({})
+    .then((pizzas) => {
+        res.status(200).json(pizzas);
     }, (err) => {
         res.status(500).json(err);
     });
  }
 
-function readPizzas(req, res) {
+function readPizza(req, res) {
 
-    let Todo = require("../models/pizza");
+    let Pizza = require("../models/pizza");
 
-    Todo.findById({_id : req.params.id})
-    .then((pizzas) => {
-        res.status(200).json(pizzas);
+    Pizza.findById({_id : req.params.id})
+    .then((pizza) => {
+        res.status(200).json(pizza);
     }, (err) => {
         res.status(500).json(err);
     });
@@ -48,9 +48,9 @@ function readPizzas(req, res) {
 
 function deletePizza(req, res) {
 
-    let Todo = require("../models/pizza");
+    let Pizza = require("../models/pizza");
 
-    Todo.findOneAndRemove({_id : req.params.id})
+    Pizza.findOneAndRemove({_id : req.params.id})
     .then((deletedPizza) => {
         res.status(200).json(deletedPizza);
     }, (err) => {

@@ -1,6 +1,3 @@
-
-
-
 //Use Express middleware to manage incoming requests and 
 //dispatch them to corresponding behaviours
 const express = require('express');
@@ -65,7 +62,7 @@ const infoLogger = loggers.get('infoLogger');
 
 //Connecting to MongoDB (async/await approach)
 const connectDb = async () => {
-    await mongoose.connect('mongodb://localhost:27017/todo', {useNewUrlParser: true, useUnifiedTopology : true}).then(
+    await mongoose.connect('mongodb://localhost:27017/Projet_Pizzeria', {useNewUrlParser: true, useUnifiedTopology : true}).then(
         () => {
             console.log(chalk.green(`Connected to database`))
             infoLogger.info("Connected to database");
@@ -75,18 +72,16 @@ const connectDb = async () => {
             process.exit(1)
         }
     )
-  }
+}
   
-  connectDb().catch(error => console.error(error))
+connectDb().catch(error => console.error(error))
 
 const pizzaRoutes = require('./routes/pizza');
-
 const commandeRoutes = require('./routes/commande');
-  
-//Acces the routes 
-app.use(pizzaRoutes); 
-app.use(commandeRoutes);  
 
+//app.use('/api/v1/', todoRoutes);
+app.use(pizzaRoutes); 
+app.use(commandeRoutes);
 
 //When there is no route that caught the incoming request
 //use the 404 middleware
@@ -101,3 +96,6 @@ app.listen(3000, () => {
 
 //Print out where the server is
 console.log(chalk.green("Server is running on port: 3000"));
+
+
+

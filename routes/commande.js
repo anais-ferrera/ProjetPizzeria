@@ -8,7 +8,6 @@ const controller = require('../controllers/commande');
 router.post("/commande", (req, res) => {
 
     controller.create(req, res);
-    res.json({"msg": "Create a Pizza"});
 
 });
 
@@ -16,7 +15,6 @@ router.post("/commande", (req, res) => {
 router.get("/commandes", (req, res) => {
     
     controller.reads(req, res);
-    res.json({"msg": "Read a Pizza"});
 
 });
 
@@ -26,13 +24,11 @@ router.get("/commande/:id", (req, res) => {
 
 });
 
-
 //DELETE
 router.delete("/commande/:id", (req, res) => {
     
     controller.delete(req, res);
 
 });
-
 
 module.exports = router;

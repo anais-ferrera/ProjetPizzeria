@@ -1,6 +1,6 @@
 function createCommande(req, res) {
     let Todo = require('../models/commande');
-    let newCommande = C ({
+    let newCommande = Commande ({
         num_commande: req.body.num_commande,
         nom_client : req.body.nom_client,
         adrresse_livraison : req.body.adrresse_livraison,
@@ -19,25 +19,25 @@ function createCommande(req, res) {
 
 }
 
-function readCommande(req, res) {
+function readCommandes(req, res) {
 
-    let Todo = require("../models/commande");
+    let Commande = require("../models/commande");
 
     Todo.find({})
-    .then((commande) => {
-        res.status(200).json(commande);
+    .then((commandes) => {
+        res.status(200).json(commandes);
     }, (err) => {
         res.status(500).json(err);
     });
  }
 
-function readCommandes(req, res) {
+function readCommande(req, res) {
 
-    let Todo = require("../models/commande");
+    let Commande = require("../models/commande");
 
     Todo.findById({_id : req.params.id})
-    .then((commandes) => {
-        res.status(200).json(commandes);
+    .then((commande) => {
+        res.status(200).json(commande);
     }, (err) => {
         res.status(500).json(err);
     });
@@ -46,10 +46,10 @@ function readCommandes(req, res) {
 
 function deleteCommande(req, res) {
 
-    let Todo = require("../models/commande");
+    let Commande = require("../models/commande");
 
     Todo.findOneAndRemove({_id : req.params.id})
-    .then((deletedTodo) => {
+    .then((deletedCommande) => {
         res.status(200).json(deletedCommande);
     }, (err) => {
         res.status(500).json(err);

@@ -28,3 +28,6 @@ Mon, 19 Oct 2020 11:40:06 GMT | ERROR  | HTTP 404: ask for:  http://localhost:30
 Mon, 19 Oct 2020 11:55:30 GMT | ERROR  | HTTP 404: ask for:  http://localhost:3000/commande
 Mon, 19 Oct 2020 11:56:13 GMT | ERROR  | HTTP 404: ask for:  http://localhost:3000/pizza
 Mon, 19 Oct 2020 11:57:23 GMT | ERROR  | HTTP 404: ask for:  http://localhost:3000/pizza
+Thu, 05 Nov 2020 07:42:18 GMT | ERROR  | HTTP 404: ask for:  http://localhost:3000/pizza
+Thu, 05 Nov 2020 07:42:39 GMT | ERROR  | HTTP 404: ask for:  http://localhost:3000/pizza
+Thu, 05 Nov 2020 07:42:39 GMT | ERROR  | HTTP 404: ask for:  http://localhost:3000/favicon.ico
